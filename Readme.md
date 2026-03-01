@@ -1,53 +1,37 @@
-# Weather App
+# 🌤 Weather Dashboard
 
-## Description
-
-The Weather App is a simple application that provides real-time weather information for any location. It fetches data from a weather API and displays current weather conditions, temperature, and other relevant details.
+A full-stack weather app built with Flask and React, containerized with Docker.
 
 ## Features
+- 🔍 Search weather by city
+- 📍 Auto-detect your location
+- 🌡 Temperature, humidity, feels like
+- 🐳 Dockerized for easy setup
 
-- Search weather by city or location.
-- Display current temperature, humidity, and weather conditions.
-- User-friendly interface.
+## Tech Stack
+- **Backend:** Python, Flask, OpenWeatherMap API
+- **Frontend:** React, Vite
+- **DevOps:** Docker, Docker Compose
 
-## Installation
+## Setup
 
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/your-username/weather-app.git
-    ```
-2. Navigate to the project directory:
-    ```bash
-    cd weather-app
-    ```
-3. Install dependencies:
-    ```bashs
-    npm install
-    ```
+### Without Docker
+# Backend
+cd backend
+pip install -r requirements.txt
+python app.py
 
-## Usage
+# Frontend
+cd frontend
+npm install
+npm run dev
 
-1. Start the application:
-    ```bash
-    npm start
-    ```
-2. Open your browser and navigate to `http://localhost:3000`.
+### With Docker
+docker-compose up --build
 
-## Technologies Used
+## Environment Variables
+Create `backend/.env`:
+OPENWEATHER_API_KEY=your_key_here
 
-- JavaScript
-- HTML/CSS
-- Weather API (e.g., OpenWeatherMap)
-
-## Contributing
-
-Contributions are welcome! Please fork the repository and submit a pull request.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
-## Acknowledgments
-
-- [OpenWeatherMap](https://openweathermap.org/) for the weather API.
-- Inspiration and resources from the developer community.
+## Live at
+http://localhost:5173
